@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>Rantly Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>Rently</h1>
+            <ul>
+                <li>Dashboard</li>
+                <li>About</li>
+                <li>API Docs</li>
+                <li>Contact US</li>
+            </ul>
+            <div class="image">
+                <img src="./dashboardAssets/login-image.jpg" alt="">
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-dashboard" id="goto-dashboard">My DashBoard</div>
+            <div class="sidebar-rent-pay-collect" id="goto-pay-collect">Pay/Collect Rent</div>
+        </div>
+        <div id="dashboard" class="dashboard">
+            <h1>All Available Products</h1>
+            <div class="note">
+                <b>********* Note ********</b>
+                <b>Double Click on Products To Rent.</b>
+            </div>
+            <div class="tabOne" id="tabOne">
+                <!-- <div class="product">
+                    <img src="./dashboardAssets/watch1.jpeg" alt="">
+                    <span>Rent : 250 USD</span>
+                </div> -->
+            </div>
+            <h1>My Products To Rent</h1>
+            <div class="tabTwo" id="tabTwo">
+                <div id="tabTwoProducts" class="products">
+                    <!-- <div class="product">
+                        <img src="./dashboardAssets/watch1.jpeg" alt="">
+                        <span>Rent : 250 USD</span>
+                    </div> -->
+                </div>
+                <button id="add-product">Add Product</button>
+                <form class="form" id="form">
+                    <b>***** Fill this Form to Add Product *****</b>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required>
+                    <label for="rent">Rent</label>
+                    <input type="number" name="rent" id="rent" required>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+            <div class="tabThree" id="tabThree">    
+                <h1>Rented As Tenant : </h1>
+                <div id="tenant-products" class="products">
+                    <!-- <div class="product">
+                        <img src="./dashboardAssets/watch1.jpeg" alt="">
+                        <span>Rent : 250 USD</span>
+                    </div> -->
+                </div>
+                <h1>Rented As Owner : </h1>
+                <div id="owner-products" class="products">
+                    <!-- <div class="product">
+                        <img src="./dashboardAssets/watch1.jpeg" alt="">
+                        <span>Rent : 250 USD</span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div id="pay-collect" class="pay-collect">
+            <h1>Collect Rent</h1>
+            <div class="tabOne" id="collect-rent-products">
+                <!-- <div class="product">
+                    <img src="./dashboardAssets/watch1.jpeg" alt="">
+                    <span>Rent : 250 USD</span>
+                    <button>Collect Rent</button>
+                </div> -->
+            </div>
+            <h1>Pay Rent</h1>
+            <div class="tabTwo" id="pay-rent-products">
+                <!-- <div class="product">
+                    <img src="./dashboardAssets/watch1.jpeg" alt="">
+                    <span>Rent : 250 USD</span>
+                    <button>Pay Rent</button>
+                </div> -->
+            </div>
+            <div class="total">
+                <b>Total Rent Collected :</b>
+                <small id="total-collected">0</small>
+                <br>
+                <b>Total Rent Paid :</b>
+                <small id="total-paid">0</small>
+            </div>
+        </div>
+        <div class="payCollectRent"></div>
+    </div>
+    
+
+    <!-- JS File for Dashboard Page -->
+    <script src="./dashboard.js"></script>
+</body>
+</html>

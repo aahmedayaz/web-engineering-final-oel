@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-One{
+    width: 100%;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    border: 5px double rgb(41, 3, 66);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Sono', sans-serif;
+}
+
+.navbar h1{
+    color: hsl(167, 100%, 22%);
+    letter-spacing: 5px;
+    margin-left: 80px;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar ul li{
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.navbar ul li:hover{
+    font-weight: bolder;
+    cursor: pointer;
+    transform: scale(1.06);
+}
+
+.navbar ul li:active{
+    transform: scale(1);
+}
+
+.navbar .image{
+    overflow: hidden;
+    height: calc(10vh - 12px);
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 80px;
+}
+
+.navbar .image img{
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+}
+
+.sidebar{
+    top: 10vh;
+    position: fixed;
+    width: 20%;
+    height: 90vh;
+    background-color: #160c29;
+    color: azure;
+    border-right: 2px solid black;
+    overflow-x: auto;
+    z-index: 10;
+    font-family: 'Nunito', sans-serif;
+}
+
+.sidebar > div{
+    transition: all 0.2s linear;
+}
+
+.sidebar > div:hover {
+    cursor: pointer;
+    width: 115%;
+}
+
+
+.sidebar .sidebar-dashboard{
+    border-top: 1px solid white;
+}
+
+.sidebar .sidebar-dashboard a , .sidebar .sidebar-rent-pay-collect a{
+    text-decoration: none;
+    color: azure;
+}
+
+.sidebar .sidebar-dashboard , .sidebar .sidebar-rent-pay-collect{
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.dashboard{
+    z-index: 1;
+    top: 10vh;
+    left: 20%;
+    position: fixed;
+    width: 80%;
+    height: 90vh;
+    overflow-y: scroll;
+    font-family: 'Nunito', sans-serif;
+}
+
+.dashboard > div{
+    background-color: rgb(255, 255, 255);
+    min-height: max-content;
+    width: calc(100% - 40px);
+    margin: 20px;
+}
+
+.dashboard h1{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dashboard .tabOne{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border: 3px solid rgb(155, 155, 155);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.product{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 20px;
+    width: 202px;
+    min-height: 200px;
+    border: 1px solid black;
+    transition: all 0.1s linear;
+    border-radius: 5px;
+}
+
+.product img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.product small {
+    background-color: tomato;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 10;
+}
+
+.dashboard .tabOne .product:hover , .dashboard .tabTwo .products .product:hover , .tabThree .products .product:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.dashboard .tabOne .product:active , .dashboard .tabTwo .products .product:active , .tabThree .products .product:active{
+    transform: scale(1);
+}
+
+.dashboard .tabOne .product img , .dashboard .tabTwo .products .product img , .tabThree .products .product img{
+    width: 200px;
+}
+
+
+.dashboard .tabTwo{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border: 3px solid rgb(155, 155, 155);
+}
+
+.dashboard .tabTwo .products , .tabThree .products{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard .tabTwo > button{
+    margin: 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgb(238, 255, 0);
+    transition: all 0.2s linear;
+}
+
+.dashboard .tabTwo button:hover , .dashboard .tabTwo .form button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.dashboard .tabTwo button:active , .dashboard .tabTwo .form button:active{
+    transform: scale(1);
+}
+
+.dashboard .tabTwo .form{
+    margin: 0 auto;
+    background-color: rgb(236, 236, 236);
+    padding: 20px;
+    width: 350px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.show{
+    display: flex !important;
+}
+
+.dashboard .tabTwo .form input[type="submit"]{
+    margin: 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 0.2s linear;
+    background-color: #c95c5c;
+    color: #ffffff;
+    align-self: center;
+    width: 120px;
+}
+
+.dashboard .note{
+    margin: 20px;
+    background-color: rgb(231, 86, 86);
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    width: 300px;
+}
+
+.dashboard .note > b{
+    display: block;
+}
+
+.dashboard .tabThree{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border: 3px solid rgb(155, 155, 155);
+}
+
+.pay-collect{
+    display: none;
+    z-index: 1;
+    top: 10vh;
+    left: 20%;
+    position: fixed;
+    width: 80%;
+    height: 90vh;
+    overflow-y: scroll;
+    font-family: 'Nunito', sans-serif;
+}
+
+.pay-collect > h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pay-collect .tabOne , .pay-collect .tabTwo{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border: 3px solid rgb(155, 155, 155);
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.pay-collect .product button{
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: rgb(0, 255, 76);
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.pay-collect .tabTwo .product button{
+    background-color: #ffee00;
+}
+
+.total{
+    height: max-content;
+    padding: 10px;
+    background-color: #e9e9e9;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.total b{
+    color: Red;
+}
